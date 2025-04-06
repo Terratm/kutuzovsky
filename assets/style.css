@@ -46,3 +46,43 @@ footer {
 .button:hover {
       background-color: #009fd1;
 }
+
+/* Стиль для раздела Примеры работ */
+
+.portfolio {
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+.portfolio h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.portfolio-item {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+.portfolio-info {
+  padding: 15px;
+}
+.portfolio-info h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.portfolio-info p {
+  font-size: 1em;
+  color: #555;
+}
