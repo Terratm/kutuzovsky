@@ -1,0 +1,102 @@
+/* Определяем блочную модель */
+html {
+ box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+ box-sizing: inherit;
+}
+
+/* Убираем стандартное подчёркивание у ссылок */
+a {
+ text-decoration: none;
+}
+
+/* Устанавливаем минимальный размер экрана и добавляем фоновое изображение */
+body {
+ min-height: 100vh;
+ font-family: "Poppins", sans-serif;
+ background-image: url(../images/bg.jpg);
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: cover;
+}
+
+/* Стилизуем контейнер */
+.container {
+ max-width: 1190px;
+ padding: 0 15px; /* Увеличиваем боковые отступы */
+ margin: 0 auto; /* Центрируем контейнер по горизонтали */
+}
+
+/* Стилизуем верхнюю часть шапки */
+.header__top {
+ padding: 30px;
+}
+
+/* Стилизуем меню */
+.menu__list {
+ display: flex;
+ justify-content: center;
+ list-style: none;
+}
+
+.menu__list-item {
+ margin: 0 10px;
+}
+
+.menu__list-link {
+ position: relative;
+ color: #fffee7;
+ font-size: 1.1em;
+ text-decoration: none;
+ padding: 6px 20px;
+ cursor: pointer;
+}
+
+.menu__list-link span {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border: 2px solid #fff;
+ border-radius: 7px;
+ transform: scale(0);
+ opacity: 0;
+ transition: transform 0.5s;
+}
+
+.menu__list-link:hover span {
+ transform: scale(1);
+ opacity: 1;
+}
+
+/* Стилизуем обёртку для контента */
+.header__content-inner {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-between;
+ height: 80vh;
+}
+
+.header__title {
+ font-size: 9em;
+ text-align: center;
+ -webkit-text-stroke: 1px #fff;
+ color: transparent;
+ background: url(/images/back-text.png);
+ -webkit-background-clip: text;
+ background-position: 0 0;
+ animation: backText 20s linear infinite alternate;
+}
+
+/* Анимируем текст в заголовке */
+@keyframes backText {
+ 100% {
+   background-position: 2000px 0;
+ }
+}
